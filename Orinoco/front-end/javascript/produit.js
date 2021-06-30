@@ -12,7 +12,7 @@ console.log(camId);
 const productApi = 'http://localhost:3000/api/cameras';
 
 //J'appelle mon localstorage de la page produit
-let panier = JSON.parse(localStorage.getItem("panier"));
+let panierLocalStorage = [];
 
 // fonction qui contient le fetch pour récupérer les données de l'API et avoir l'identifiant du produit dans URL
 function productFetch() {
@@ -84,25 +84,25 @@ function ajoutDuProduit(camera){
   };
   
   // si le panier est vide alors il doit ajouté un produit dans le tableau
-  if (panier == null){
-    panier = []
+  if (localStorage.getItem('product') === null){
+    panierLocalStorage.push(camerasProduit);
+    localStorage.setItem('product', JSON.stringify(panierLocalStorage));
 }else {
-  product = JSON.parse(localStorage.getItem('product'));
+  panierLocalStorage = JSON.parse(localStorage.getItem('product'));
 
 //Pour chaque produit du même id et même option il faut augmenté la quantité
-  panier.forEach((produit) => {
-    if (camera._id === camerasProduit._id && choixLenses === produit.option) {
-      camerasProduit.qte = parseInt(produit.qte) + parseInt(qteChoix);
-      produit.qte++
+  panierLocalStorage.forEach((produit) => {
+    if (camera._id === produit._id && choixLenses === produit.option) {
+      produit.qte = parseInt(produit.qte) + parseInt(qteChoix);
       autreItem = false;
     }
   });
 
+  if (autreItem)panierLocalStorage.push(camerasProduit);
+  localStorage.setItem("product", JSON.stringify(panierLocalStorage));
+
 }
-    window.alert("Les produits ont bien été ajouté au panier");
-    
-  if (autreItem)panier.push(camerasProduit);
-  localStorage.setItem("panier", JSON.stringify(panier));
+  window.alert("Les produits ont bien été ajouté au panier");
 }
 
 function ajoutQte(positionElementQte){

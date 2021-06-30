@@ -1,5 +1,5 @@
 //J'appelle mon localstorage de la page produit
-let panier = JSON.parse(localStorage.getItem("panier"));
+let panier = JSON.parse(localStorage.getItem("product"));
 
 //---------affichage des produits du panier
 //sélection de l'id pour injecter le code HTML 
@@ -52,7 +52,7 @@ function supprimerBouton() {
             //j'utilise la méthode filter pour supprimer l'élément où btn supprimer a été cliqué
             panier = panier.filter(el => el.option !== idSupp);
             //je relie le bouton à mon localstorage pour qu'il sâche ce que je veux supprimer
-            localStorage.setItem("panier", JSON.stringify(panier));
+            localStorage.setItem("product", JSON.stringify(panier));
             //retour sur la page panier pour que le message de panier vide s'affiche
             window.location.href = "panier.html";
             //quand je clique sur le bouton le localstorage se vide aussi
@@ -65,7 +65,7 @@ supprimerBouton();
 
 function calculTotalPrix() {
     if (panier !== null) {
-    JSON.parse(localStorage.getItem("panier")).forEach((panier) => {
+    JSON.parse(localStorage.getItem("product")).forEach((panier) => {
         totalPrix += panier.price *= panier.qte;
         console.log(totalPrix)
         
