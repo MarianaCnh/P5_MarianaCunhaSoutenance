@@ -11,6 +11,9 @@ console.log(camId);
 
 const productApi = 'http://localhost:3000/api/cameras';
 
+//J'appelle mon localstorage de la page produit
+let panier = JSON.parse(localStorage.getItem("panier"));
+
 // fonction qui contient le fetch pour récupérer les données de l'API et avoir l'identifiant du produit dans URL
 function productFetch() {
     fetch(productApi + "/" + camId)
@@ -90,7 +93,7 @@ function ajoutDuProduit(camera){
   panier.forEach((produit) => {
     if (camera._id === camerasProduit._id && choixLenses === produit.option) {
       camerasProduit.qte = parseInt(produit.qte) + parseInt(qteChoix);
-      produit.qte ++
+      produit.qte++
       autreItem = false;
     }
   });
