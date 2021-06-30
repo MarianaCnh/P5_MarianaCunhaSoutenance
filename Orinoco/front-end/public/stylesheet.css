@@ -1,0 +1,424 @@
+/******GLOBAL******/
+body {
+    background-color: white;
+    color: black;
+    margin: auto;
+    font-family: 'Oxygen','Courier New', Courier, monospace;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+/************ HEADER ************/
+
+img {
+    width: 200px;
+    height: 70px;
+}
+
+.nomBoutique {
+    font-size: larger;
+    padding-top: 20px;
+}
+.header {
+    display: flex;
+    background-color: #9d4edd;
+    padding: 15px 0;
+}
+
+.navigation {
+    width: 100%;
+}
+
+.acces {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 30px;
+    padding: 0;
+}
+
+.home {
+    padding: 10px;
+}
+
+.cart {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.cart2 {
+    padding: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+/******** CARTES PRODUITS **********/
+
+.sectionProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardProduct {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: #9d4edd solid 2px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+.qteOptionProduit {
+    display: flex;
+    flex-direction: column;
+}
+
+#optionProduit {
+    color: white;
+    background-color: #9d4edd;
+    width: 50%;
+    outline: none;
+    margin: 10px;
+    align-self: center;
+}
+
+#qteProduit {
+    color: white;
+    background-color: #9d4edd;
+    width: 50%;
+    outline: none;
+    margin: 10px;
+    align-self: center;
+}
+
+.boutoncommande {
+    border: 3px solid#9d4edd;
+    color: white;
+    border-radius: 30px;
+    width: 80%;
+    background-color: #9d4edd;
+    margin: 10px;
+    font-family: 'Oxygen','Courier New', Courier, monospace;
+    padding: 10px;
+    outline: none;
+}
+
+.btn-panier {
+    border: 3px solid#9d4edd;
+    color: white;
+    border-radius: 30px;
+    width: 80%;
+    background-color: #9d4edd;
+    margin: 10px;
+    font-family: 'Oxygen','Courier New', Courier, monospace;
+    padding: 10px;
+    align-self: center;
+    outline: none;
+}
+
+/******** FOOTER *********/
+
+footer {
+    background-color: #9d4edd;
+    padding: 20px;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    margin: 16px;
+    padding: 0px;
+}
+
+/************** PANIER ***********/
+
+.panierVide {
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    margin:10px;
+}
+
+.inputqte {
+    width:3%;
+}
+
+#tableproduit {
+    border: 2px solid #9d4edd;
+    width: 100%;
+    padding: 5px;
+}
+
+#formulaire {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.optionProduit {
+    font-weight: bold;
+}
+
+.trproduit {
+    padding: 10px;
+}
+
+#tdproduit {
+    margin: 50px;
+}
+
+.btn-supprimer {
+    border: 3px solid #9d4edd;
+    border-radius: 20px;
+    padding: 5px;
+    outline: none;
+}
+
+.totalPrix {
+    font-weight: lighter;
+    font-style: oblique;
+    font-size: larger;
+}
+
+#calculPrixQte {
+    margin: 20px;
+    font-weight: bold;
+}
+
+/*************** FORMULAIRE ***************/
+
+.titreFormulaire {
+    margin: 30px;
+    font-size: large;
+    flex-wrap: wrap;
+}
+
+.contenuformulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+label {
+    padding: 5px;
+}
+
+#prenom {
+    border: 3px solid#9d4edd;
+    width: 50%;
+    padding: 5px;
+    margin: 0 10px 20px 0;
+}
+
+#nom {
+    border: 3px solid#9d4edd;
+    width: 50%;
+    padding: 5px;
+    margin: 0 10px 20px 0;
+}
+
+#adresse {
+    border: 3px solid#9d4edd;
+    width: 50%;
+    margin: 0 10px 20px 0;
+    
+}
+
+#ville {
+    border: 3px solid#9d4edd;
+    width: 50%;
+    padding: 5px;
+    margin: 0 10px 20px 0;
+}
+
+#codepostal {
+    border: 3px solid#9d4edd;
+    width: 50%;
+    padding: 5px;
+    margin: 0 10px 20px 0;
+}
+
+#email {
+    border: 3px solid#9d4edd;
+    width: 50%;
+    padding: 5px;
+    margin: 0 10px 20px 0;
+}
+
+#envoyerFormulaire {
+    border: 3px solid#9d4edd;
+    border-radius: 30px;
+    width: 50%;
+    background-color: #9d4edd;
+    margin: 10px;
+    font-family: 'Oxygen','Courier New', Courier, monospace;
+    padding: 10px;
+    color: white;
+  
+}
+
+
+.styleManquant {
+    color: rgb(153, 63, 63);
+}
+
+.messageFinalCommande {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*************** CONFIRMATION ***************/
+
+.messageFinalCommande{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/*********MEDIA QUERIES*********/
+
+
+/*******TABLETTE**********/
+
+@media screen and (min-width:768px) and (max-width:1146px){
+
+    #cam {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        padding:57px;
+    }
+    .cardProduct {
+        width: 70%; 
+    }
+
+
+    .acces {
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+    }
+
+    .logo {
+        width: 200px;
+        height: 70px;
+        margin-left: 15px;
+    }
+
+    .boutoncommande {
+        width: 40%;
+    }
+
+    .btn-panier {
+        width: 40%;
+    }
+
+    #optionProduit {
+        width: 30%;
+    }
+
+    #qteProduit {
+        width: 30%;
+    }
+    .contenuformulaire {
+        padding: 30px;
+    }
+
+    .messageFinalCommande {
+        height: 100vh;
+    }
+
+}
+
+/******************DESKTOP***************/
+
+@media screen and (min-width:1147px) and (max-width:2000px){
+
+   
+    #cam {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        padding: 57px;
+    }
+
+    .sectionProduct{
+        padding: 50px;
+    }
+    .cardProduct {
+        width: 40%;
+    }
+
+
+    .acces {
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+    }
+
+    .logo {
+        width: 200px;
+        height: 70px;
+        margin-left: 15px;
+    }
+
+    .boutoncommande {
+        width: 40%;
+    }
+
+    .btn-panier {
+        width: 40%;
+    }
+
+    #optionProduit {
+        width: 30%;
+    }
+
+    #qteProduit {
+        width: 30%;
+    }
+
+    .tdtableauproduit {
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .titreFormulaire{
+        display: flex;
+        justify-content: center;
+        font-size: x-large;
+    }
+
+    .contenuformulaire {
+        padding: 100px;
+        margin: 50px;
+    }
+
+    .messageFinalCommande {
+        height: 100vh;
+    }
+}
+
